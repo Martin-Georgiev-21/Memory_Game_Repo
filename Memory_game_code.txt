@@ -106,7 +106,7 @@
 
 
 
-// Button pin definitions
+// Button pins
 
 #define BUTTON_RED    9
 #define BUTTON_GREEN  2
@@ -115,14 +115,14 @@
 
 
 
-// Buzzer pin definitions
+// Buzzer pins
 
 #define BUZZER1  4
 #define BUZZER2  7
 
 
 
-// Define game parameters
+//game parameters
 
 #define ROUNDS_TO_WIN      13 //Номера на рундовете преди играчът да спечели (13 рунда са абсолютно постижими) 
 #define ENTRY_TIME_LIMIT   3000 //Времето в милисекунди за натискане на бутон
