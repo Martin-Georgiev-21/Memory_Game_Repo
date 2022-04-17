@@ -1,0 +1,393 @@
+int analog1,analog2, analog3, p1;
+  int p2;
+  int p3;
+  int p4;
+  int p5;
+  int p6;
+  int p7;
+  int p8;
+  int p9;
+
+int r1;
+int r2;
+int r3;
+int r4;
+int r5;
+int r6;
+int r7;
+int r8;
+int r9;
+
+int a1;
+int a2;
+int a3;
+int a4;
+int a5;
+int a6;
+int a7;
+int a8;
+int a9;
+
+int count;
+
+int turn;
+
+
+void setup()
+{
+  pinMode(0, OUTPUT);
+  pinMode(1, OUTPUT);
+  pinMode(2, OUTPUT);
+  pinMode(3, OUTPUT);
+  pinMode(4, OUTPUT);
+  pinMode(5, OUTPUT);
+  pinMode(6, OUTPUT);
+  pinMode(7, OUTPUT);
+  pinMode(8, OUTPUT);
+  pinMode(9, OUTPUT);
+  pinMode(10, OUTPUT);
+  pinMode(11, OUTPUT);
+  pinMode(12, OUTPUT);
+  pinMode(13, OUTPUT);
+  r1 = 0;
+  a1 = 0;
+    
+  
+}
+
+void loop()
+{
+ if(turn == 0) { digitalWrite(11, HIGH); } else { digitalWrite(11, LOW); }
+ if(turn == 1) { digitalWrite(12, HIGH); } else { digitalWrite(12, LOW); }
+  
+   flag2:;
+  count = count + 1;
+    digitalWrite(7, LOW);
+  if(r1 == 1){
+   digitalWrite(13, HIGH);
+  }
+  if(r2 == 1){
+   digitalWrite(1, HIGH);
+  }
+  if(r3 == 1){
+   digitalWrite(0, HIGH);
+  }
+  
+    if(a1 == 1){
+   digitalWrite(2, HIGH);
+  }
+  if(a2 == 1){
+   digitalWrite(3, HIGH);
+  }
+  if(a3 == 1){
+   digitalWrite(4, HIGH);
+  }
+  
+  delay(10);
+  
+   digitalWrite(7, HIGH);
+  digitalWrite(13, LOW);
+  digitalWrite(1, LOW);
+  digitalWrite(0, LOW);
+  digitalWrite(2, LOW);
+  digitalWrite(3, LOW);
+  digitalWrite(4, LOW);
+  
+      digitalWrite(6, LOW);
+  if(r4 == 1){
+   digitalWrite(13, HIGH);
+  }
+  if(r5 == 1){
+   digitalWrite(1, HIGH);
+  }
+  if(r6 == 1){
+   digitalWrite(0, HIGH);
+  }
+  
+    if(a4 == 1){
+   digitalWrite(2, HIGH);
+  }
+  if(a5 == 1){
+   digitalWrite(3, HIGH);
+  }
+  if(a6 == 1){
+   digitalWrite(4, HIGH);
+  }
+  
+  delay(10);
+  
+   digitalWrite(6, HIGH);
+  digitalWrite(13, LOW);
+  digitalWrite(1, LOW);
+  digitalWrite(0, LOW);
+  digitalWrite(2, LOW);
+  digitalWrite(3, LOW);
+  digitalWrite(4, LOW);
+  
+      digitalWrite(5, LOW);
+  if(r7 == 1){
+   digitalWrite(13, HIGH);
+  }
+  if(r8 == 1){
+   digitalWrite(1, HIGH);
+  }
+  if(r9 == 1){
+   digitalWrite(0, HIGH);
+  }
+  
+    if(a7 == 1){
+   digitalWrite(2, HIGH);
+  }
+  if(a8 == 1){
+   digitalWrite(3, HIGH);
+  }
+  if(a9 == 1){
+   digitalWrite(4, HIGH);
+  }
+  
+  delay(10);
+  
+   digitalWrite(5, HIGH);
+  digitalWrite(13, LOW);
+  digitalWrite(1, LOW);
+  digitalWrite(0, LOW);
+  digitalWrite(2, LOW);
+  digitalWrite(3, LOW);
+  digitalWrite(4, LOW);
+  
+  if(count < 20)
+  {
+    goto flag2;
+  }
+  else
+  {
+    count = 0;
+  }
+    
+  
+  flag1:;
+  digitalWrite(10,HIGH);
+  analog1 = analogRead(A5);
+  analog2 = analogRead(A4);
+  analog3 = analogRead(A3);  
+  
+  
+  if (analog1 > 500)
+  {
+    p1 = 1;
+  }
+  else
+  {
+    p1 = 0;
+  }
+  
+    if (analog2 > 500)
+  {
+    p4 = 1;
+  }
+  else
+  {
+    p4 = 0;
+  }
+  
+    if (analog3 > 500)
+  {
+    p7 = 1;
+  }
+  else
+  {
+    p7 = 0;
+  }
+  
+  digitalWrite(10, LOW);
+  digitalWrite(9, HIGH);
+    analog1 = analogRead(A5);
+  analog2 = analogRead(A4);
+  analog3 = analogRead(A3);
+  
+    if (analog1 > 500)
+  {
+    p2 = 1;
+  }
+  else
+  {
+    p2 = 0;
+  }
+  
+    if (analog2 > 500)
+  {
+    p5 = 1;
+  }
+  else
+  {
+    p5 = 0;
+  }
+  
+    if (analog3 > 500)
+  {
+    p8 = 1;
+  }
+  else
+  {
+    p8 = 0;
+  }
+  
+   digitalWrite(9, LOW);
+  digitalWrite(8, HIGH);
+    analog1 = analogRead(A5);
+  analog2 = analogRead(A4);
+  analog3 = analogRead(A3);
+  
+    if (analog1 > 500)
+  {
+    p3 = 1;
+  }
+  else
+  {
+    p3 = 0;
+  }
+  
+    if (analog2 > 500)
+  {
+    p6 = 1;
+  }
+  else
+  {
+    p6 = 0;
+  }
+  
+    if (analog3 > 500)
+  {
+    p9 = 1;
+  }
+  else
+  {
+    p9 = 0;
+  }
+  
+  digitalWrite(8, LOW);
+  
+  if(p1 + p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9 > 1)
+  {
+  
+     p1 = 0;
+     p2 = 0;
+     p3 = 0;
+     p4 = 0;
+     p5 = 0;
+     p6 = 0;
+     p7 = 0;
+     p8 = 0;
+     p9 = 0;
+    
+    digitalWrite(11, HIGH);
+    digitalWrite(12, HIGH);
+    delay(1000);
+    digitalWrite(11, LOW);
+    digitalWrite(12, LOW);
+    delay(1000);
+      digitalWrite(11, HIGH);
+    digitalWrite(12, HIGH);
+    delay(1000);
+    digitalWrite(11, LOW);
+    digitalWrite(12, LOW);
+    delay(1000);
+      digitalWrite(11, HIGH);
+    digitalWrite(12, HIGH);
+    delay(1000);
+    digitalWrite(11, LOW);
+    digitalWrite(12, LOW);
+    
+    
+    goto flag1;
+  }
+   if(p1 + p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9 == 1)
+  {
+  if(turn == 1)
+  {
+    turn = 0;
+  }
+  else
+  {
+     turn = 1;
+  }
+   }
+  if ((p1 == 1) && (turn == 1))
+ {
+
+    a1 = 1;
+  }
+  if((p2 == 1) && (turn == 1))
+  {
+    a2 = 1;
+  }
+  if((p3 == 1) && (turn == 1))
+  {
+  a3 = 1;
+  }   
+  if((p4 == 1) && (turn == 1))
+  {
+    a4 = 1;
+  }
+  if((p5 == 1) && (turn == 1))
+  {
+  a5 = 1;
+  }
+  if((p6 == 1) && (turn == 1))
+  {
+  a6 = 1;
+  }
+  if((p7 == 1) && (turn == 1))
+  {
+  a7 = 1;
+  }
+    if((p8 == 1) && (turn == 1))
+    {
+      a8 = 1;
+    }
+  if((p9 == 1) && (turn == 1))
+  {
+        a9 = 1;
+  }
+  
+    if((p1 == 1) && (turn == 0))
+ {
+
+    r1 = 1;
+  }
+  if((p2 == 1) && (turn == 0))
+  {
+    r2 = 1;
+  }
+  if((p3 == 1) && (turn == 0))
+  {
+  r3 = 1;
+  }   
+  if((p4 == 1) && (turn == 0))
+  {
+    r4 = 1;
+  }
+  if((p5 == 1) && (turn == 0))
+  {
+  r5 = 1;
+  }
+  if((p6 == 1) && (turn == 0))
+  {
+  r6 = 1;
+  }
+  if((p7 == 1) && (turn == 0))
+  {
+  r7 = 1;
+  }
+    if((p8 == 1) && (turn == 0))
+    {
+      r8 = 1;
+    }
+  if((p9 == 1) && (turn == 0))
+  {
+        r9 = 1;
+  }
+  
+}
+  
+}
